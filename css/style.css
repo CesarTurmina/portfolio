@@ -78,6 +78,7 @@ header {
 nav ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     background-color: #2e4069;
     padding: 10px 20px;
