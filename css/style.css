@@ -425,14 +425,18 @@ footer {
   }
 
   h2.sobre-mim .linha1 {
+    font-size: 1.5rem;
     transform: translateX(0%);
     text-align: center;
   }
 
   h2.sobre-mim .linha2 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
-
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 290px }
+  }
   nav ul {
     flex-direction: column;
     gap: 10px;
