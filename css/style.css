@@ -200,6 +200,7 @@ h2.sobre-mim .linha2{
 p {
     margin-bottom: 20px;
     line-height: 1.6;
+    text-align: justify;
 }
 
 footer {
@@ -378,7 +379,6 @@ footer {
 
 .btn-codigo {
     display: inline-block;
-    background-color: #2e4069;
     color: #fff;
     padding: 10px 18px;
     border-radius: 25px;
