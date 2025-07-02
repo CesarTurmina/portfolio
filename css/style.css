@@ -113,11 +113,13 @@ main {
 
 .sobre-mim-container{
     margin-bottom: 40px;
+    text-align: left;
+    padding: 20px;
 }
 
 h2.sobre-mim{
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     margin-bottom: 0;
     position: relative;
 }
@@ -131,7 +133,6 @@ h2.sobre-mim::after{
     margin: 10px auto 0;
     border-radius: 2px;
 }
-
 h2.sobre-mim .linha1{
     color: #1b2a49;
     display: block;
@@ -139,6 +140,12 @@ h2.sobre-mim .linha1{
     font-weight: bold;
     opacity: 0;
     animation: frase1 1.2s ease-out forwards;
+}
+@media (max-width: 768px) {
+  h2.sobre-mim .linha1 {
+    transform: translateX(0%);
+    text-align: center;
+  }
 }
 
 h2.sobre-mim .linha2{
@@ -179,7 +186,7 @@ h2.sobre-mim .linha2{
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 480px }
+    to { width: 390px }
 }
 
 
