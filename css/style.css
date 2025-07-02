@@ -8,6 +8,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f9ff;
     color: #333;
+    overflow-x: hidden;
 }
 
 header {
@@ -17,6 +18,8 @@ header {
     background-color: #1b2a49;
     padding: 20px;
     color: white;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .marca {
@@ -47,9 +50,9 @@ header {
 .perfil {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
-
 
 .foto-perfil {
     width: 25vw;
@@ -88,6 +91,7 @@ nav a:hover {
     padding: 10px 20px;
     border-radius: 50px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    justify-content: center;
 }
 
 .menu a {
@@ -113,7 +117,6 @@ main {
 
 .sobre-mim-container{
     margin-bottom: 40px;
-    text-align: left;
     padding: 20px;
 }
 
@@ -133,6 +136,7 @@ h2.sobre-mim::after{
     margin: 10px auto 0;
     border-radius: 2px;
 }
+
 h2.sobre-mim .linha1{
     color: #1b2a49;
     display: block;
@@ -140,12 +144,6 @@ h2.sobre-mim .linha1{
     font-weight: bold;
     opacity: 0;
     animation: frase1 1.2s ease-out forwards;
-}
-@media (max-width: 768px) {
-  h2.sobre-mim .linha1 {
-    transform: translateX(0%);
-    text-align: center;
-  }
 }
 
 h2.sobre-mim .linha2{
@@ -169,6 +167,7 @@ h2.sobre-mim .linha2{
     line-height: 1.8;
     font-weight: 400;
 }
+
 .sobre p {
     margin-bottom: 20px;
 }
@@ -189,12 +188,12 @@ h2.sobre-mim .linha2{
     to { width: 390px }
 }
 
-
 @keyframes blink {
     0% { border-color: #2e4069; }
     50% { border-color: transparent; }
     100% { border-color: #2e4069; }
 }
+
 p {
     margin-bottom: 20px;
     line-height: 1.6;
@@ -206,7 +205,6 @@ footer {
     background-color: #1b2a49;
     color: white;
     margin-top: 40px;
-
 }
 
 .formacao-container {
@@ -254,6 +252,7 @@ footer {
 .formacao-item p {
     color: #555;
 }
+
 .subtitulo {
     margin-top: 60px;
 }
@@ -395,4 +394,61 @@ footer {
 .btn-codigo:hover {
     background-color: #1b2a49;
     transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  .perfil {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .perfil h1 {
+    margin-top: 10px;
+  }
+
+  .foto-perfil {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  h2.sobre-mim .linha1 {
+    transform: translateX(0%);
+    text-align: center;
+  }
+
+  h2.sobre-mim .linha2 {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 15px;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .formacao-container,
+  .portfolio-container,
+  .sobre {
+    padding: 20px 10px;
+  }
+
+  .projeto-item,
+  .formacao-item,
+  .certificado-item {
+    padding: 15px;
+  }
 }
