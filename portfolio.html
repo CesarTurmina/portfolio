@@ -1,12 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Portfólio - César Turmina</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    
+  <header>
+    <div class="perfil">
+      <img src="img/foto.jpg" alt="César Turmina" class="foto-perfil" />
+      <h1 class="marca">César Turmina</h1>
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Sobre</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<section class="portfolio-container">
+  <h2 class="titulo-secao">Meus Projetos</h2>
+
+  <h3 class="subsecao">Projetos da Faculdade</h3>
+
+  <div class="projeto-item">
+    <h4>Modelagem de Banco de Dados</h4>
+    <p>Trabalho acadêmico com diagrama entidade-relacionamento (MER) e criação de tabelas SQL. Desenvolvido com base em um sistema hoteleiro.</p>
+    <a href="#img-mer" class="btn-ver">Ver Trabalho</a>
+  </div>
+  <div id="img-mer" class="lightbox">
+    <a href="#" class="fechar">&times;</a>
+    <img src="img/mer-trabalho.png" alt="Modelo ER Banco de Dados" class="lightbox-img">
+  </div>
+
+  <div class="projeto-item">
+    <h4>Site Pessoal em HTML/CSS</h4>
+    <p>Desenvolvido como parte da disciplina de Desenvolvimento Web, com uso de HTML5, CSS3 e boas práticas de estruturação.</p>
+    <a href="https://github.com/usuario/repositorio-projeto" target="_blank" class="btn-codigo">
+  <span>&lt;/&gt;</span> Ver Código
+</a>
+  </div>
+
+  <h3 class="subsecao">Projetos Pessoais</h3>
+
+  <div class="projeto-item">
+    <h4>Exercícios Java Básicos</h4>
+    <p>Conjunto de exercícios práticos focados em lógica e fundamentos de Java.</p>
+    <a href="https://github.com/usuario/repositorio-java-basico" target="_blank">Ver no GitHub</a>
+  </div>
+
+  <div class="projeto-item">
+    <h4>Projeto Java 360°</h4>
+    <p>Projeto desenvolvido durante o curso Java 360°, aplicando conceitos de orientação a objetos.</p>
+    <a href="https://github.com/usuario/repositorio-java360" target="_blank">Ver no GitHub</a>
+  </div>
+</section>
+  </main>
+
+  <footer>
+    <p>Todos os direitos reservados a César Turmina. 2025</p>
+  </footer>
 </body>
 </html>
