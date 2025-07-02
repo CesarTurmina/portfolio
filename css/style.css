@@ -64,7 +64,7 @@ header {
     background: linear-gradient(135deg, #a9c6ff, #2e4069);
     padding: 4px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transform: rotate(-3deg);
+    //transform: rotate(-3deg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-right: 30px;
 }
@@ -140,7 +140,8 @@ h2.sobre-mim::after{
 h2.sobre-mim .linha1{
     color: #1b2a49;
     display: block;
-    transform: translateX(-20%);
+    margin: 0 auto;
+    text-align: center;
     font-weight: bold;
     opacity: 0;
     animation: frase1 1.2s ease-out forwards;
@@ -148,7 +149,9 @@ h2.sobre-mim .linha1{
 
 h2.sobre-mim .linha2{
     color: #2e4069;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
     font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
@@ -178,7 +181,7 @@ h2.sobre-mim .linha2{
         opacity: 0;
     }
     100% {
-        transform: translateX(-10%);
+        transform: translateX(0%);
         opacity: 1;
     }
 }
