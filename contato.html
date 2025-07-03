@@ -6,8 +6,10 @@
     <title>Contato</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+<!-- No body, utilizei uma div "perfil" para estilizar ambos, usando classes na foto e no h1
+     Mesma estrutura para paginas: index.html/contato.html/formacao.html/portfolio.html -->
 <body>
-    <header>
+   <header>
         <div class="perfil">
             <img src="img/foto.jpg" alt="Cesar Turmina" class="foto-perfil">
             <h1 class="marca">César Turmina</h1>
@@ -22,9 +24,10 @@
             </ul>
         </nav>
     </header>
+<!-- Informações de contato. Utiliza classes na main, h2 e nas divs
+     No formulário, optei por criar id  e classe, assim o id ficará sendo manipulado pelo javascript e a classe pelo css-->
 <main class="contato-container">
     <h2 class="titulo-secao">Contato</h2>
-
     <div class="contato-info">
         <div class="info-item">
             <h4>Localização</h4>
@@ -45,43 +48,47 @@
     </div>
     <br><br>
     <form id="form-contato" class="formulario-contato">
-    <label class="titulo-formulario">Deixe sua mensagem</label>
-    <label for="nome">Nome</label>
-    <input type="text" id="nome" name="nome" required>
+        <label class="titulo-formulario">Deixe sua mensagem</label>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" required>
 
-    <label for="email">E-mail</label>
-    <input type="email" id="email" name="email" required>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
 
-    <label for="mensagem">Mensagem</label>
-    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-    <button type="submit">Enviar</button>
-</form>
+        <button type="submit">Enviar</button>
+    </form>
 </main>
-    <footer>
-          <div class="footer-container">
-    <p>Todos os direitos reservados a César Turmina. 2025</p>
+<!-- No footer, criei classes para criar botões de melhor manipulação
+     Mesmo codigo para pagina: index.html/contato.html/formacao.html/portfolio.html-->
+<footer>
+    <div class="footer-container">
+        <p>Todos os direitos reservados a César Turmina. 2025</p>
         <div class="footer-links">
-        <a href="https://github.com/CesarTurmina" target="_blank" class="footer-btn">GitHub</a>
-        <a href="https://instagram.com/cesarturmina" target="_blank" class="footer-btn">Instagram</a>
-        <a href="https://wa.me/5549988330375" target="_blank" class="footer-btn">WhatsApp</a>
+            <a href="https://github.com/CesarTurmina" target="_blank" class="footer-btn">GitHub</a>
+            <a href="https://instagram.com/cesarturmina" target="_blank" class="footer-btn">Instagram</a>
+            <a href="https://wa.me/5549988330375" target="_blank" class="footer-btn">WhatsApp</a>
+        </div>
     </div>
-  </div>
-    </footer>
+</footer>
+<!-- Script em javascript para manipular o formulário (de momento ficticio) utilizando
+     o e.preventDefault() fazendo com que abra uma caixa de confirmação com alert()-->
 <script>
-  document.getElementById("form-contato").addEventListener("submit", function (e) {
-    e.preventDefault();
+    document.getElementById("form-contato").addEventListener("submit", function (e) {
+        e.preventDefault();
 
-    const nome = document.getElementById("nome").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const mensagem = document.getElementById("mensagem").value.trim();
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
 
-    if (nome && email && mensagem) {
-      alert("Mensagem enviada com sucesso!");
-      window.location.href = "index.html";
-    } else {
-      alert("Por favor, preencha todos os campos.");
-    }
+            if (nome && email && mensagem) {
+                alert("Mensagem enviada com sucesso!");
+                window.location.href = "index.html";
+            } else {
+                alert("Por favor, preencha todos os campos.");
+            }
   });
 </script>
 </body>
